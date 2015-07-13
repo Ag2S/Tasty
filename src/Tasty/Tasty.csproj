@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9991FD02-9775-489B-9768-73F6EDE66DCF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Tasty</RootNamespace>
+    <AssemblyName>Tasty</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Database\IDatabaseRestorer.cs" />
+    <Compile Include="MockServer\Configure\AbstractConfigurator.cs" />
+    <Compile Include="MockServer\Configure\Configurator.cs" />
+    <Compile Include="MockServer\Configure\ConfigureCollection.cs" />
+    <Compile Include="MockServer\Http\HttpMethod.cs" />
+    <Compile Include="MockServer\Http\MockHttpServerProviderExtensions.cs" />
+    <Compile Include="MockServer\IMockServerProvider.cs" />
+    <Compile Include="MockServer\IWhenClause.cs" />
+    <Compile Include="MockServer\IDoClause.cs" />
+    <Compile Include="MockServer\MockServerProviderCollection.cs" />
+    <Compile Include="MockServer\Configure\Configure.cs" />
+    <Compile Include="MockServer\Smtp\MockSmtpServer.cs" />
+    <Compile Include="MockServer\Smtp\MockSmtpServerExtensions.cs" />
+    <Compile Include="Utility\FileSystemExtensions.cs" />
+    <Compile Include="Utility\InnerClassFactory.cs" />
+    <Compile Include="Utility\IInnerClass.cs" />
+    <Compile Include="Utility\IOuterSetter.cs" />
+    <Compile Include="Utility\MvcDotNetProjectExtensions.cs" />
+    <Compile Include="Utility\MvcDotNetProjectMigrationOptions.cs" />
+    <Compile Include="WebsiteIntegrationTests.cs" />
+    <Compile Include="MockServer\Http\MockHttpServerProvider.cs" />
+    <Compile Include="MockObject\IMockFactory.cs" />
+    <Compile Include="MockObject\IMockProvider.cs" />
+    <Compile Include="MockObject\MockProvider.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ITestClause.cs" />
+    <Compile Include="IArrangeClause.cs" />
+    <Compile Include="IValidateClause.cs" />
+    <Compile Include="StandaloneHttpServer\IISExpressServer.cs" />
+    <Compile Include="StandaloneHttpServer\IStandaloneHttpServer.cs" />
+    <Compile Include="SubjectBasedTests.cs" />
+    <Compile Include="TestData\IValueAccessor.cs" />
+    <Compile Include="TestData\ITestDataContainer.cs" />
+    <Compile Include="TestData\TestDataContainer.cs" />
+    <Compile Include="Tests.cs" />
+    <Compile Include="UnitTests.cs" />
+    <Compile Include="Utility\IOuterGetter.cs" />
+    <Compile Include="Utility\InnerClass.cs" />
+    <Compile Include="Utility\InnerClassExtensions.cs" />
+    <Compile Include="Utility\TypeDictionaryKey.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
